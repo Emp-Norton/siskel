@@ -44,9 +44,10 @@ describe('Siskel', function() {
     it('should have a default comparator for title', function() {
       expect(collection.comparator).to.equal('title');
     });
-
+    
     it('should update its comparator', function() {
       collection.sortByField('rating');
+      //debugger;
       expect(collection.comparator).to.equal('rating');
     });
 
@@ -57,6 +58,7 @@ describe('Siskel', function() {
 
     it('should trigger sort when a model changes', function() {
       model.toggleLike();
+      //debugger;
       expect(collection.sort).to.have.been.called;
     });
 
